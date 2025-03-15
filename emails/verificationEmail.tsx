@@ -2,10 +2,20 @@ import { Button, Html } from "@react-email/components";
 import { Heading } from "@react-email/components";
 import * as React from "react";
 
-export default function Email({ username, otp }) {
+interface verificationEmailProps {
+  username: string;
+  otp: string;
+}
+
+export default function VerificationEmail({
+  username,
+  otp,
+}: verificationEmailProps) {
   return (
     <Html>
-      <Heading className="text-center">Ray Tomlinson</Heading>
+      <Heading className="text-center">
+        Hey User, {username}, Your OTP is {otp}
+      </Heading>
 
       <Button
         href="https://example.com"
