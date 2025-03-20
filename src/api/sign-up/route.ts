@@ -3,7 +3,7 @@ import dbConnect from "@/lib/dbConnect";
 import UserModel from "@/models/User";
 
 import bcrypt from "bcryptjs";
-
+//typescript is easyy
 export async function POST(request: Request) {
   await dbConnect();
 
